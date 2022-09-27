@@ -12,7 +12,7 @@ public class Calculator {
         b=s.nextInt();
         while (true)
         {
-            System.out.println("select an option");q
+            System.out.println("select an option");
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
             System.out.println("3. Devision");
@@ -28,8 +28,15 @@ public class Calculator {
                 case 2:
                     System.out.println("Sub="+(a-b));
                     break;
-                case 3:
-                    System.out.println("Sum="+(a/b));
+                case 3:try {
+
+
+                    System.out.println("Sum=" + (a / b));
+                }
+                catch (ArithmeticException e)
+                {
+                    System.out.println("Arithematic Exception "+e);
+                }
                     break;
                 case 4:
                     System.out.println("Sum="+(a*b));
